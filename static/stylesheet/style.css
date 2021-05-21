@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+h2{
+    text-align: center;
+    border: 2px ridge blue;
+    width: 20vh;
+    margin: 0 auto;
+    padding: 2px 2px;
+    color: white;
+    font-weight: 500;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: all 1s ease;
+}
+.main-active{
+    display: flex;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    background-color: rgb(194, 194, 194);
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: auto;
+    
+}
+.sec-active{
+    scroll-snap-align: start;
+    display: inline-block;
+    height: 100%;
+    min-width: 100%;
+    position: relative;
+    border-left: 2px solid rgb(177, 177, 177);
+    border-right: 2px solid rgb(177, 177, 177);
+}
+img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25vh;
+    width: 50vh;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    box-shadow: 0px 35px 50px -30px black;
+}
+.img-active{
+    height: 40vh;
+}
+#content {
+    background-color: white;
+    margin-top: 40px;
+}
+#content::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+header{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+}
+form{
+    margin: 30px 0;
+}
+#loaders{
+    text-align: center;
+}
+#loaders img{
+    width: 150px;
+    margin: 0 auto;
+    /* display: none; */
+}
+#resetBtn {
+    float: right;
+}
+#spinner{
+    display: none;
+}
